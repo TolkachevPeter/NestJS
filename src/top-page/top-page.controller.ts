@@ -6,14 +6,10 @@ import { TopPageModule } from './top-page.module';
 
 @Controller('top-page')
 export class TopPageController {
-  constructor(private readonly configService: ConfigService) {
-
-  }
+  constructor(private readonly configService: ConfigService) {}
 
   @Post('create')
-  async create(@Body() dto: Omit<TopPageModule, '_id'>){
-
-  }
+  async create(@Body() dto: Omit<TopPageModule, '_id'>){}
 
   @Get('get/:alias')
   async get(@Param('alias') alias: string): Promise<TopPageModel> {
